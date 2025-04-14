@@ -6,6 +6,12 @@ import { error } from "node:console"
 import { checkSessionIdExists } from "../middlewares/check-session-id-exists"
 
 export async function transactionsRoutes(app: FastifyInstance){
+    /*
+    add um hook (function) que executa antes das rotas globalmente no contexto de transactions    
+    app.addHook('preHandler', async () => {
+        console.log('')
+    })
+    */
 
     app.post('/', async (request, reply) => {
 
